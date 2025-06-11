@@ -144,6 +144,24 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+    "*": {
+        "after_insert": "webhook_trigger.events.handle_after_insert",
+        "before_save": "webhook_trigger.events.handle_before_save",
+        "after_save": "webhook_trigger.events.handle_after_save",
+        "on_update": "webhook_trigger.events.handle_on_update",
+        "before_submit": "webhook_trigger.events.handle_before_submit",
+        "on_submit": "webhook_trigger.events.handle_on_submit",
+        "before_cancel": "webhook_trigger.events.handle_before_cancel",
+        "on_cancel": "webhook_trigger.events.handle_on_cancel",
+        "before_trash": "webhook_trigger.events.handle_before_trash",
+        "on_trash": "webhook_trigger.events.handle_on_trash",
+        "after_delete": "webhook_trigger.events.handle_after_delete",
+        "on_rename": "webhook_trigger.events.handle_on_rename",
+        "on_change": "webhook_trigger.events.handle_on_change",
+        "validate": "webhook_trigger.events.handle_validate",
+    }
+}
 
 # Scheduled Tasks
 # ---------------
